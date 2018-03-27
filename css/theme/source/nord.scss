@@ -1,0 +1,69 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@font-face {
+    font-family: 'Ostrich Sans';
+    font-weight: bold;
+}
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #8fbcbb;
+$base02:    #eceff4;
+$base01:    #e5e9f0;
+$base00:    #d8dee9;
+$base0:     #4c566a;
+$base1:     #434c5e;
+$base2:     #3b4252;
+$base3:     #2e3440;
+$yellow:    #5e81ac;
+$orange:    #81a1c1;
+$red:       #88c0d0;
+$magenta:   #b48ead;
+$violet:    #a3be8c;
+$blue:      #ebcb8b;
+$cyan:      #d08770;
+$green:     #bf616a;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base00;
+$headingFont: 'Ostrich Sans';
+$headingFontWeight: bold;
+$headingColor: $cyan;
+$headingTextShadow: none;
+$backgroundColor: $base3;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
